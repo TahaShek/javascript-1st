@@ -1,3 +1,4 @@
+// ALL SELECTORS
 const numbers=document.querySelectorAll('.btn');
 const Result=document.querySelector('input');
 const operations=document.querySelectorAll('.operation-btn');
@@ -29,7 +30,6 @@ numbers.forEach(btn => {
 operations.forEach(operations => {
   operations.addEventListener('click', function () {
     // console.log(this.textContent);
-    
     inputValue +=this.innerText ;
     Result.value = inputValue;
   });
@@ -37,14 +37,14 @@ operations.forEach(operations => {
 
 
 
-
+// eventlistner for AC 
 AC.addEventListener('click', function () {
 Result.value = '0';
     inputValue = '';
   });
 
 
-
+// LISTNER FOR CLEAR 
  C.addEventListener('click',function(){
     try {
         if(Result.value.length===1){
@@ -59,7 +59,8 @@ Result.value = '0';
         alert(error.message);
     }
  });
-
+  
+// EVALUATION
  equalBtn.addEventListener('click',function(){
 Result.value=eval(inputValue);
 inputValue='';
