@@ -18,8 +18,10 @@ numbers.forEach(btn => {
 
 
 // eventListner for operators
-operations.forEach(operators => {
-    operators.addEventListener('click',function(){
-        console.log('workin');
-    })
+operations.forEach(operations => {
+  operations.addEventListener('click', function () {
+    // console.log(this.textContent);
+    inputValue +=this.innerText ;
+    Result.value = inputValue;
+  });
 });
